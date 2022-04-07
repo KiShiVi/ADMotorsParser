@@ -57,7 +57,7 @@ def test():
 
         tmpFind = ''
         if len(re.findall(r'<a class=\"lightbox fancybox\" rel=\"pgallery\" title=\".*\" href=\".*\">', main_page)) > 0:
-            print(re.findall(r'<a class=\"lightbox fancybox\" rel=\"pgallery\" title=\".*\" href=\".*\">', main_page))
+            # print(re.findall(r'<a class=\"lightbox fancybox\" rel=\"pgallery\" title=\".*\" href=\".*\">', main_page))
             tmpFind = str(re.findall(r'<a class=\"lightbox fancybox\" rel=\"pgallery\" title=\".*\" href=\".*\">', main_page)[0])
         if len(tmpFind) != 0:
             finishString += ';' + str(tmpFind[tmpFind.find('title') + 7:][:tmpFind[tmpFind.find('title') + 7:].find('\"')])
